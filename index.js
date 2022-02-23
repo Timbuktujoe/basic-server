@@ -4,6 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 require("dotenv").config()
 const Message = require("./models/Message");
+const cors = require("cors")
 
 // 1. connect to debugger 
 // 2. import Message
@@ -13,6 +14,8 @@ app.use((req, res, next) => {
     console.log(req.method, req.path);
     next();
 });
+
+app.use(cors())
 
 app.use(express.json());
 
