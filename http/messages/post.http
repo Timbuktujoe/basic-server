@@ -1,0 +1,8 @@
+POST http://localhost:8080/messages
+Content-Type: application/JSON
+
+{
+    "from":"bob",
+    "to":"joe",
+    "message": "lol"
+}
